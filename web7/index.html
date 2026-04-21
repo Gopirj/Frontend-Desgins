@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C2hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><img src="./img/logo.png" alt=""></a>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#rooms" class="nav-link">Rooms</a></li>
+                    <li><a href="#restaurant" class="nav-link">Restaurant</a></li>
+                    <li><a href="#sallery" class="nav-link">Sallery</a></li>
+                    <li><a href="#content" class="nav-link">Content</a></li>
+                </ul>
+                <div class="hambuger">
+                    <samp class="bar"></samp>
+                    <samp class="bar"></samp>
+                    <samp class="bar"></samp>
+                </div>
+            </nav>
+        </div> 
+    </header>
+    <script>
+        const hambuger = document.querySelector('.hambuger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hambuger.addEventListener("click",mobileMenu);
+
+        function mobileMenu(){
+            hambuger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll('.nav-link');
+        navLink.forEach((n)=> n.addEventListener("click",closeMenu));
+
+        function closeMenu(){
+            hambuger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+    <section class="home" id="home">
+        <div class="head_container">
+            <div class="box">
+                <div class="text">
+                    <h1>Hello.Salut.Hola</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui necessitatibus, assumenda perferendis eligendi cupiditate sit sunt impedit non sed mollitia.</p>
+                    <button>MORE INFO</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./img/home1.jpg"  class="slide">
+            </div>
+            <div class="image_item">
+                <img src="./img/home1.jpg" alt="" class="slide active" onclick="img('./img/home1.jpg')">
+                <img src="./img/home2.jpg" alt="" class="slide" onclick="img('./img/home2.jpg')">
+                <img src="./img/home3.jpg" alt="" class="slide" onclick="img('./img/home3.jpg')">
+                <img src="./img/home4.jpg" alt="" class="slide" onclick="img('./img/home4.jpg')">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function img(anything){
+            document.querySelector('.slide').src = anything;
+        }
+
+        function change(change){
+            const line = document.querySelector('.image');
+            line.style.background = change;
+        }
+    </script>
+
+    <section class="book">
+        <div class="container flex">
+            <div class="input grid">
+                <div class="box">
+                    <label>Check-in:</label>
+                    <input type="date" placeholder="Check-in-Date">
+                </div>
+                <div class="box">
+                    <label>Check-out:</label>
+                    <input type="date" placeholder="Check-out-Date">
+                </div>
+                <div class="box">
+                    <label>Adults:</label>
+                    <input type="number" placeholder="0">
+                </div><div class="box">
+                    <label>Children:</label>
+                    <input type="number" placeholder="0">
+                </div>
+            </div>
+            <div class="search">
+                <input type="submit" value="SEARCH">
+            </div>
+        </div>
+    </section>
+    <section class="about top" id="about">
+        <div class="container flex">
+            <div class="left">
+                <div class="img">
+                    <img src="./img/a1.jpg" alt="" class="image1">
+                    <img src="./img/a2.jpg" alt="" class="image2">
+                </div>
+            </div>
+            <div class="right">
+                <div class="heading">
+                    <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+                    <h2>Welcome to Gopi Hotel Resort</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quis ducimus esse, doloribus quasi fugit maiores ipsum error libero rerum, modi consectetur quidem totam ullam numquam magni nam alias distinctio!
+                    </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam maxime deserunt, adipisci assumenda animi, ea, dolores accusantium eveniet praesentium numquam veritatis aspernatur tempora ipsum enim temporibus amet beatae error quam?</p>
+                    <button class="btn1">READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper top">
+        <div class="container">
+            <div class="text">
+                <h2>Our Amenities</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eum sequi, earum necessitatibus, eligendi illo officiis excepturi nam id adipisci quia amet, similique pariatur deserunt placeat iure accusamus ea veritatis!</p>
+                <div class="content">
+                    <div class="box flex">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Swimming pool</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gym & yogo</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-spa"></i>
+                        <span>Spa & massage</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-ship"></i>
+                        <span>Boat Tours</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-swimmer"></i>
+                        <span>Surfing Lessons</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-microphone"></i>
+                        <span>Conference room</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-water"></i>
+                        <span>Diving & smorking</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>Private Beach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="room top" id="room">
+        <div class="container">
+            <div class="heading_top flex1">
+                <div class="heading">
+                    <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+                    <h2>Rooms $ Suites</h2>
+                </div>
+                <div class="button">
+                    <button class="btn1">VIEW ALL</button>
+                </div>
+            </div>
+            <div class="content grid">
+                <div class="box">
+                    <div class="img">
+                        <img src="./img/r1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Superior Soble Rooms</h3>
+                        <p><span>$</span>129<span>/per night</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="./img/r2.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Superior Soble Rooms</h3>
+                        <p><span>$</span>129<span>/per night</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="./img/r3.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Superior Soble Rooms</h3>
+                        <p><span>$</span>129<span>/per night</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper wrapper2 top">
+        <div class="container">
+            <div class="text">
+                <div class="heading">
+                    <h5>AT THE HEART OF COMMUNICATION</h5>
+                    <h2>People Say</h2>
+                </div>
+                <div class="para">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore beatae quia unde vitae placeat adipisci iure omnis, optio iste qui odit, quisquam quasi. Amet dolorum velit ipsum adipisci blanditiis quas!</p>
+
+                    <div class="box flex">
+                        <div class="img">
+                            <img src="./img/c.jpg" alt="">
+                        </div>
+                        <div class="name">
+                            <h5>KATE PALMER</h5>
+                            <h5>IDAHO</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="restaurant top" id="restaurant">
+        <div class="container flex">
+            <div class="left">
+                <img src="./img/re.jpg" alt="">
+            </div>
+            <div class="right">
+                <div class="text">
+                    <h2>Our Restaurant</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quam quisquam maxime, veniam expedita amet, deleniti laboriosam qui commodi dolores eveniet harum accusamus quae? Quia, minima placeat? Totam, eaque quam.</p>
+                </div>
+                <div class="accordionWrapper">
+                    <div class="accordionItem open">
+                        <h2 class="accordionIHeading">Italian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod impedit sit aliquid non, magni id sunt cum ex ipsam nisi ratione assumenda eligendi a repellat exercitationem tempora molestiae natus accusantium.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIHeading">Mexican  Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod impedit sit aliquid non, magni id sunt cum ex ipsam nisi ratione assumenda eligendi a repellat exercitationem tempora molestiae natus accusantium.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIHeading">Italian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod impedit sit aliquid non, magni id sunt cum ex ipsam nisi ratione assumenda eligendi a repellat exercitationem tempora molestiae natus accusantium.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIHeading">Mexican Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod impedit sit aliquid non, magni id sunt cum ex ipsam nisi ratione assumenda eligendi a repellat exercitationem tempora molestiae natus accusantium.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var accItem = document.getElementsByClassName('accordionItem');
+        var accHD = document.getElementsByClassName('accordionIHeading');
+
+        for(i=0; i < accHD.length; i++){
+            accHD[i].addEventListener('click',toggleItem, false);
+        }
+
+        function toggleItem(){
+            var itemclass = this.parentNode.className;
+            for(var i=0; i < accItem.length; i++){
+                accItem[i].className = 'accordionItem close';
+            }
+            if(itemclass == 'accordionItem close'){
+                this.parentNode.closeName = 'accordionItem open';
+            }
+        }
+    </script>
+
+    <section class="gallary top" id="gallary">
+        <div class="conatainer">
+            <div class="heading_top flex1">
+                <div class="heading">
+                    <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+                    <h2>Photo Gallery of Our Hotal</h2>
+                </div>
+                <div class="button">
+                    <button class="btn1">VIEW GALLERY</button>
+                </div>
+            </div>
+            
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="./img/g1.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g2.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g3.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g4.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g5.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g6.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g7.jpg" alt="">
+
+                </div>
+                <div class="item">
+                    <img src="./img/g8.jpg" alt="">
+
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" referrerpolicy="no-referrer">    
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots : false,
+    navText :["<i class='fas fa-chevron-left'</i>" , "<i class='fas fa-chevron-right'</i>"],
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+    </script>
+      
+</body>
+</html>
