@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notspad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Notepad</h1>
+    </div>
+
+    <div class="container">
+        <div class="box-container">
+            <h2>letter</h2>
+            <h5>Gopi</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem assumenda quibusdam tempore repellendus, recusandae cupiditate tenetur ullam praesentium odit minima provident eos ducimus numquam cum quia eligendi quas laudantium magnam!</p>
+            <button onclick="deletebox(event)">Delete</button>
+        </div>
+        
+    </div>
+
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+        <h2>Add Notepad</h2>
+        <form>
+            <input type="text" placeholder="Add Title" id="add-title">
+            <input type="text" placeholder="your Name" id="your-name">
+            <textarea placeholder="Description" id="Description"></textarea>
+            <button id="add">Add</button>
+            <button id="cancel">Cancel</button>
+        </form>
+    </div>
+
+    <button class="add-button" id="add-popop-button">+</button>
+    <script src="script.js"></script>
+</body>
+</html>
